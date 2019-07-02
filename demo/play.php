@@ -1,42 +1,15 @@
 
 <?php
-//获取ip
-     function getIp()
-    {
-
-        if(!empty($_SERVER["HTTP_CLIENT_IP"]))
-        {
-            $cip = $_SERVER["HTTP_CLIENT_IP"];
-        }
-        else if(!empty($_SERVER["HTTP_X_FORWARDED_FOR"]))
-        {
-            $cip = $_SERVER["HTTP_X_FORWARDED_FOR"];
-        }
-        else if(!empty($_SERVER["REMOTE_ADDR"]))
-        {
-            $cip = $_SERVER["REMOTE_ADDR"];
-        }
-        else
-        {
-            $cip = '';
-        }
-        preg_match("/[\d\.]{7,15}/", $cip, $cips);
-        $cip = isset($cips[0]) ? $cips[0] : 'unknown';
-        unset($cips);
-
-        return $cip;
-    }
-
 //----------------------------------
 // 腾讯验证码后台接入demo
 //----------------------------------
 header('Content-type:text/html;charset=utf-8');
 
-$AppSecretKey = ""; //$_GET["AppSecretKey"]
+$AppSecretKey = "0b3Y2vnsjQtorTXYQSy05TQ**"; //$_GET["AppSecretKey"]
 $appid = $_GET["appid"];
 $Ticket =$_GET["Ticket"];
 $Randstr =$_GET["randstr"];
-$UserIP = getIp(); //$_GET["UserIP"]
+$UserIP = $_GET["UserIP"];
 var_dump($UserIP);
 /**
  * 请求接口返回内容
