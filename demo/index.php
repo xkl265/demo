@@ -1,6 +1,7 @@
 
 <html>
 <head>
+
         <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
         <script>
             window.callback = function(res){
