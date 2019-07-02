@@ -5,7 +5,7 @@
 //----------------------------------
 header('Content-type:text/html;charset=utf-8');
 
-$AppSecretKey = "0b3Y2vnsjQtorTXYQSy05TQ**"; //$_GET["AppSecretKey"]
+$AppSecretKey = ""; //$_GET["AppSecretKey"]
 $appid = $_GET["appid"];
 $Ticket =$_GET["Ticket"];
 $Randstr =$_GET["randstr"];
